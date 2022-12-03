@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
 
     public Image fadeScreen;
     public float fadeSpeed;
+    public GameObject levelText;
     private bool fadeToBlack, fadeOutBlack;
 
     public string newGameScene, mainMenuScene;
