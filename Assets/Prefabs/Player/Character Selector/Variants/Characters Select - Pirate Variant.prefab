@@ -7,10 +7,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8784357713862950784, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2434488045695454344, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Pirate
+      value: Characters Select - Pirate Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773310159004440760, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: playerToSpawn
+      value: 
+      objectReference: {fileID: 1173099955804765908, guid: 6c5ca940c19489645afe496a7ae7c3c9,
+        type: 3}
+    - target: {fileID: 4636129111154659584, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803871728993370608, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_Text
+      value: '''The Pirate'''
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
@@ -29,6 +55,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -40,16 +71,6 @@ PrefabInstance:
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
@@ -71,18 +92,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1960546628078278901, guid: a47294d8f066c634d90ee371916313ff,
-        type: 3}
-    - target: {fileID: 4803871728993370608, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_Text
-      value: '''The Pirate'''
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773310159004440760, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: playerToSpawn
-      value: 
-      objectReference: {fileID: 1173099955804765908, guid: 6c5ca940c19489645afe496a7ae7c3c9,
+      objectReference: {fileID: 21300000, guid: 762de85019516af418fafeacf8c9dc48,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cdd26869d03ee745952e3548c726fa8, type: 3}
