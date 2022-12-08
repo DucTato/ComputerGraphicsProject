@@ -318,7 +318,7 @@ MonoBehaviour:
   dashCounter: 0
   canMove: 1
   availableGuns:
-  - {fileID: 6159625823068005540}
+  - {fileID: 0}
   currentGun: 0
 --- !u!58 &6846304495334215259
 CircleCollider2D:
@@ -491,7 +491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3334246013087768557}
+  - {fileID: 4105095550366402671}
   m_Father: {fileID: 6846304495334215269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -548,7 +548,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &5349275218982395238
+--- !u!1001 &6665842888645364452
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -563,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 2823181517626305386, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_Name
-      value: Machine Gun
+      value: Green Staff
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
@@ -573,12 +573,12 @@ PrefabInstance:
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.00000004712371
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
@@ -588,22 +588,22 @@ PrefabInstance:
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
@@ -618,25 +618,13 @@ PrefabInstance:
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb150c26b973484c8aa91c5bc466a01, type: 3}
---- !u!4 &3334246013087768557 stripped
+--- !u!4 &4105095550366402671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
     type: 3}
-  m_PrefabInstance: {fileID: 5349275218982395238}
+  m_PrefabInstance: {fileID: 6665842888645364452}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6159625823068005540 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-    type: 3}
-  m_PrefabInstance: {fileID: 5349275218982395238}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

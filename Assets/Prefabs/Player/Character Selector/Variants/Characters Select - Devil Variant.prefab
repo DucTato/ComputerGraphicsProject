@@ -7,15 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8784357713862950784, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2434488045695454344, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Devil
+      value: Characters Select - Devil Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2434488045695454344, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773310159004440760, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: playerToSpawn
+      value: 
+      objectReference: {fileID: 8946404146421325609, guid: ab6f2c0a16e300149873093beb22a609,
+        type: 3}
+    - target: {fileID: 4636129111154659584, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803871728993370608, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_Text
+      value: '''The Devil'''
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
@@ -34,6 +60,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -45,16 +76,6 @@ PrefabInstance:
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
@@ -76,18 +97,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4791017427084006217, guid: a47294d8f066c634d90ee371916313ff,
-        type: 3}
-    - target: {fileID: 4803871728993370608, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: m_Text
-      value: '''The Devil'''
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773310159004440760, guid: 3cdd26869d03ee745952e3548c726fa8,
-        type: 3}
-      propertyPath: playerToSpawn
-      value: 
-      objectReference: {fileID: 8946404146421325609, guid: ab6f2c0a16e300149873093beb22a609,
+      objectReference: {fileID: 21300000, guid: a1546bd8bc20d1a45a78da9c6cceae01,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cdd26869d03ee745952e3548c726fa8, type: 3}
