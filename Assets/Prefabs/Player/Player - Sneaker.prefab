@@ -235,7 +235,7 @@ MonoBehaviour:
   dashCounter: 0
   canMove: 1
   availableGuns:
-  - {fileID: 0}
+  - {fileID: 4895963448107409977}
   currentGun: 0
 --- !u!58 &4657866952632965687
 CircleCollider2D:
@@ -623,3 +623,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2285909880064434131}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4895963448107409977 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2285909880064434131}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
