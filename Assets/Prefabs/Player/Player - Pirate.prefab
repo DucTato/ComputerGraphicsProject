@@ -233,7 +233,7 @@ MonoBehaviour:
   dashCounter: 0
   canMove: 1
   availableGuns:
-  - {fileID: 481195133762247674}
+  - {fileID: 0}
   currentGun: 0
 --- !u!58 &1173099955804765931
 CircleCollider2D:
@@ -406,7 +406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9048699723746828467}
+  - {fileID: 3988303043629392978}
   m_Father: {fileID: 1173099955804765909}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -548,7 +548,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &590226058359734298
+--- !u!1001 &4826411230208935163
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -558,53 +558,27 @@ PrefabInstance:
     - target: {fileID: 3960790257847863624, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_Name
-      value: Revolver
+      value: KnightSaber
       objectReference: {fileID: 0}
-    - target: {fileID: 4015423180119443140, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 14e47836d5e9006438b31439c35eb060,
-        type: 3}
     - target: {fileID: 4015423180119443140, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
+    - target: {fileID: 4827297696252701869, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.0690001
+      propertyPath: m_SortingLayer
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
+    - target: {fileID: 4827297696252701869, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3199996
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
+    - target: {fileID: 4827297696252701869, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99357426
-      objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.11318246
-      objectReference: {fileID: 0}
-    - target: {fileID: 7732091095530399040, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 12.998
+      propertyPath: m_SortingLayerID
+      value: 59874395
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
@@ -613,28 +587,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.486
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
@@ -644,7 +603,7 @@ PrefabInstance:
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9931368
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
@@ -659,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.116958134
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
@@ -674,30 +633,13 @@ PrefabInstance:
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -13.433
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362423dde9d00e94590a9cc85d03f3b3, type: 3}
---- !u!114 &481195133762247674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 590226058359734298}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &9048699723746828467 stripped
+--- !u!4 &3988303043629392978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
     type: 3}
-  m_PrefabInstance: {fileID: 590226058359734298}
+  m_PrefabInstance: {fileID: 4826411230208935163}
   m_PrefabAsset: {fileID: 0}
