@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 1188872159}
   - component: {fileID: 1188872158}
   - component: {fileID: 1188872160}
+  - component: {fileID: 1188872161}
   m_Layer: 10
   m_Name: TheBoss
   m_TagString: Boss
@@ -1092,6 +1093,18 @@ MonoBehaviour:
       - {fileID: 1456584887}
     endSequenceHealth: 100
   currentSequence: 0
+--- !u!114 &1188872161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188872156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fadc20864045f4d974265fdea4d844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1399304280
 GameObject:
   m_ObjectHideFlags: 0
@@ -7788,7 +7801,7 @@ PrefabInstance:
     - target: {fileID: 4657866952632965642, guid: eec30a34986bd804ba2a60e1d9142521,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec30a34986bd804ba2a60e1d9142521, type: 3}
