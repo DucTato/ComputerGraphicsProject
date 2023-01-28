@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317093659}
   - component: {fileID: 317093660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BossEye Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,6 +920,7 @@ GameObject:
   - component: {fileID: 1188872158}
   - component: {fileID: 1188872160}
   - component: {fileID: 1188872161}
+  - component: {fileID: 1188872162}
   m_Layer: 10
   m_Name: TheBoss
   m_TagString: Boss
@@ -996,7 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions: []
   theRB: {fileID: 1188872158}
-  currentHealth: 200
+  currentHealth: 1000
   deathEffect: {fileID: 6102728468932043055, guid: fe5328ddbf26710488dda2dcfaccd021,
     type: 3}
   hitEffect: {fileID: 6314180217267293822, guid: 1cc409ca0e258db44978f7088646891b,
@@ -1011,8 +1012,9 @@ MonoBehaviour:
       moveToPoint: 0
       pointToMoveTo: {fileID: 0}
       shouldShoot: 0
-      itemToShoot: {fileID: 0}
-      timeBetweenShots: 0
+      itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
+        type: 3}
+      timeBetweenShots: 0.4
       shotPoints: []
     - actionLength: 2
       shouldMove: 0
@@ -1023,24 +1025,24 @@ MonoBehaviour:
       shouldShoot: 1
       itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
         type: 3}
-      timeBetweenShots: 0.5
+      timeBetweenShots: 0.03
       shotPoints:
       - {fileID: 234123693}
       - {fileID: 441256239}
       - {fileID: 523037058}
       - {fileID: 1456584887}
-    endSequenceHealth: 100
+    endSequenceHealth: 500
   - actions:
     - actionLength: 5
       shouldMove: 1
       shouldChasePlayer: 0
-      moveSpeed: 4
+      moveSpeed: 6
       moveToPoint: 1
       pointToMoveTo: {fileID: 628075906}
       shouldShoot: 1
       itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
         type: 3}
-      timeBetweenShots: 0.5
+      timeBetweenShots: 0.2
       shotPoints:
       - {fileID: 234123693}
       - {fileID: 441256239}
@@ -1053,7 +1055,7 @@ MonoBehaviour:
       moveToPoint: 1
       pointToMoveTo: {fileID: 1858670154}
       shouldShoot: 1
-      itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
+      itemToShoot: {fileID: 7619681360312284984, guid: 7f31f13809a0cca41a4bba7f864614da,
         type: 3}
       timeBetweenShots: 0.5
       shotPoints:
@@ -1068,7 +1070,7 @@ MonoBehaviour:
       moveToPoint: 1
       pointToMoveTo: {fileID: 1560571005}
       shouldShoot: 1
-      itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
+      itemToShoot: {fileID: 7619681360312284984, guid: 7f31f13809a0cca41a4bba7f864614da,
         type: 3}
       timeBetweenShots: 0.5
       shotPoints:
@@ -1079,19 +1081,19 @@ MonoBehaviour:
     - actionLength: 5
       shouldMove: 1
       shouldChasePlayer: 0
-      moveSpeed: 4
+      moveSpeed: 6
       moveToPoint: 1
       pointToMoveTo: {fileID: 1047898011}
       shouldShoot: 1
       itemToShoot: {fileID: 7786658623380145046, guid: 3482b32bbb2ba8b4ebcf4ca5c763beca,
         type: 3}
-      timeBetweenShots: 0.5
+      timeBetweenShots: 0.2
       shotPoints:
       - {fileID: 234123693}
       - {fileID: 441256239}
       - {fileID: 523037058}
       - {fileID: 1456584887}
-    endSequenceHealth: 100
+    endSequenceHealth: 500
   currentSequence: 0
 --- !u!114 &1188872161
 MonoBehaviour:
@@ -1105,6 +1107,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fadc20864045f4d974265fdea4d844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1188872162
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188872156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e72d860e4395dfe498868bdf7c3d2617, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1399304280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399304281}
   - component: {fileID: 1399304282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BossEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7835,6 +7857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1978632768311640771, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1978632768311640782, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: levelText
@@ -7950,15 +7977,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1978632769672298325, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978632769672298325, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978632769672298325, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1978632770023626617, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1978632770023626617, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1978632770090794710, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}

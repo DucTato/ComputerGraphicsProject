@@ -6,18 +6,29 @@ public class BossBullet : MonoBehaviour
 {
     public float speed;
     private Vector3 direction;
+    public bool isHoming;
 
     // Start is called before the first frame update
     void Start()
     {
-        //direction = PlayerController.instance.transform.position - transform.position;
-        //direction.Normalize();
-        direction = transform.right;
+        if (isHoming == false)
+        {
+            direction = transform.right;
+        }
+        else
+        {
+            Destroy(gameObject, 3); // Destroy the ghost bullets after 3 seconds
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isHoming == true) 
+        {
+            direction = PlayerController.instance.transform.position - transform.position;
+            direction.Normalize();
+        }
         transform.position += direction * speed * Time.deltaTime;
 
         if(!BossController.instance.gameObject.activeInHierarchy)
