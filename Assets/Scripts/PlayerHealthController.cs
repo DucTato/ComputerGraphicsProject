@@ -62,6 +62,7 @@ public class PlayerHealthController : MonoBehaviour
 
                 UIController.instance.deathScreen.SetActive(true);
                 UIController.instance.levelText.SetActive(false);
+                BossController.instance.gameObject.SetActive(false) ;
 
 
                 AudioManager.instance.PlayGameOver();

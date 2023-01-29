@@ -12,15 +12,25 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 732545885696905849, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2434488045695454344, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Ninja Variant
+      value: Characters Select - Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 4636129111154659584, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803871728993370608, guid: 3cdd26869d03ee745952e3548c726fa8,
+        type: 3}
+      propertyPath: m_Text
+      value: '''The Wizard'''
       objectReference: {fileID: 0}
     - target: {fileID: 5261561357630229173, guid: 3cdd26869d03ee745952e3548c726fa8,
         type: 3}

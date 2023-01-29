@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 168940301}
   - component: {fileID: 168940300}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,17 +148,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168940298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.2875, y: 2.2875, z: 2.2875}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 274067398}
-  m_RootOrder: 15
+  m_Father: {fileID: 1049041651}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 481}
+  m_AnchoredPosition: {x: 78.25013, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168940300
@@ -258,12 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168940298}
   m_CullTransparentMesh: 1
---- !u!224 &274067398 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1978632768311640783, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978632769513821943}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +623,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7beaa2c9040d76941b076d06e9c95790, type: 3}
+--- !u!224 &1049041651 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1978632769224708366, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1978632769513821943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1901990230
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +947,11 @@ PrefabInstance:
       propertyPath: newGameScene
       value: Character Select
       objectReference: {fileID: 0}
+    - target: {fileID: 1978632768311640782, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: levelTextTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1978632768311640783, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1055,7 +1060,7 @@ PrefabInstance:
     - target: {fileID: 1978632769224708353, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1978632769672298325, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}

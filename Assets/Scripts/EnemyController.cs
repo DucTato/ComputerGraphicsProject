@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -71,6 +72,14 @@ public class EnemyController : MonoBehaviour
 
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer && shouldChasePlayer)
             {
+                if (PlayerController.instance.transform.position.x < transform.position.x)
+                {
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }
+                else
+                {
+                    transform.localScale = Vector3.one;
+                }
                 moveDirection = PlayerController.instance.transform.position - transform.position;
             } else
             {

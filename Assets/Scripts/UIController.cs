@@ -26,6 +26,8 @@ public class UIController : MonoBehaviour
     public Text gunText;
 
     public Slider bossHealthBar;
+    public float levelTextTime;
+     
 
 
     private void Awake()
@@ -52,17 +54,28 @@ public class UIController : MonoBehaviour
             if(fadeScreen.color.a == 0f)
             {
                 fadeOutBlack = false;
+                fadeScreen.gameObject.SetActive(false);
+
             }
         }
 
         if(fadeToBlack)
         {
+            fadeScreen.gameObject.SetActive(true);
+
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
             if (fadeScreen.color.a == 1f)
             {
                 fadeToBlack = false;
             }
         }
+
+        //levelTextTime-= Time.deltaTime;
+        //if (levelTextTime < 0)
+        //{
+        //    UIController.instance.levelText.SetActive(false);
+        //}
+       
     }
 
     public void StartFadeToBlack()

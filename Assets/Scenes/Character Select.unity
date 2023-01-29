@@ -6540,7 +6540,7 @@ PrefabInstance:
     - target: {fileID: 2194081626214840968, guid: 3ad2795e521161d43a156b28f9f89cec,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Ninja
+      value: Characters Select - Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 3860005984843900025, guid: 3ad2795e521161d43a156b28f9f89cec,
         type: 3}
@@ -6614,7 +6614,7 @@ PrefabInstance:
     - target: {fileID: 3404056154202085942, guid: 92f4a31c187f05444832a70d79fc964f,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Sneaker
+      value: Characters Select - Elf
       objectReference: {fileID: 0}
     - target: {fileID: 3404056154202085942, guid: 92f4a31c187f05444832a70d79fc964f,
         type: 3}
@@ -6980,7 +6980,7 @@ PrefabInstance:
     - target: {fileID: 4444770084257522287, guid: f594061e3b370dc47b78eb2ae9086491,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Spaceman
+      value: Characters Select - Orc
       objectReference: {fileID: 0}
     - target: {fileID: 4444770084257522287, guid: f594061e3b370dc47b78eb2ae9086491,
         type: 3}
@@ -7054,7 +7054,7 @@ PrefabInstance:
     - target: {fileID: 254488429944396993, guid: a06bd2dce188ecb429417e2dc289982c,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Lucha
+      value: Characters Select - Lizard
       objectReference: {fileID: 0}
     - target: {fileID: 254488429944396993, guid: a06bd2dce188ecb429417e2dc289982c,
         type: 3}
@@ -8216,7 +8216,7 @@ PrefabInstance:
     - target: {fileID: 5442015289778943903, guid: 1a235a73b7891534188b71226f8f0a2b,
         type: 3}
       propertyPath: m_Name
-      value: Characters Select - Pirate
+      value: Characters Select - Knight
       objectReference: {fileID: 0}
     - target: {fileID: 6778366525583483823, guid: 1a235a73b7891534188b71226f8f0a2b,
         type: 3}

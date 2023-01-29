@@ -756,6 +756,7 @@ MonoBehaviour:
   currentGun: {fileID: 3668757448852243390}
   gunText: {fileID: 666494227}
   bossHealthBar: {fileID: 6158259449458877926}
+  levelTextTime: 0
 --- !u!1 &1978632768358041722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,7 +2031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7215873698106283922
 RectTransform:
   m_ObjectHideFlags: 0
