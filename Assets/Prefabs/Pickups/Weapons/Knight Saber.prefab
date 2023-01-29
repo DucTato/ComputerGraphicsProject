@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2465911209957704866}
   - component: {fileID: 5304752443954981178}
   m_Layer: 0
-  m_Name: Revolver Pickup
+  m_Name: Knight Saber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

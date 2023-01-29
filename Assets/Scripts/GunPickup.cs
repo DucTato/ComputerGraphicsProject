@@ -27,14 +27,14 @@ public class GunPickup : MonoBehaviour
     {
         if (other.tag == "Player" && waitToBeCollected <= 0)
         {
-            bool hasGun = false;
-            foreach(Gun gunToCheck in PlayerController.instance.availableGuns)
-            {
-                if(theGun.weaponName == gunToCheck.weaponName)
-                {
+            bool hasGun = true;
+            //foreach(Gun gunToCheck in PlayerController.instance.availableGuns)
+            //{
+                //if(theGun.weaponName == gunToCheck.weaponName)
+                //{
                     hasGun = true;
-                }
-            }
+                //}
+            //}
 
             if(!hasGun)
             {

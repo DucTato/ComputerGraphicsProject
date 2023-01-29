@@ -62,11 +62,13 @@ public class UIController : MonoBehaviour
         if(fadeToBlack)
         {
             fadeScreen.gameObject.SetActive(true);
+            levelText.gameObject.SetActive(false);
 
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
             if (fadeScreen.color.a == 1f)
             {
                 fadeToBlack = false;
+                
             }
         }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5451082061488700253}
   - component: {fileID: 7812454047774814062}
   m_Layer: 0
-  m_Name: Pistol Pickup
+  m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

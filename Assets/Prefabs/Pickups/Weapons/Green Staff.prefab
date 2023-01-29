@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5345533770886781992}
   - component: {fileID: 5345533770886781993}
   m_Layer: 0
-  m_Name: Machine Gun Pickup
+  m_Name: Green Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
