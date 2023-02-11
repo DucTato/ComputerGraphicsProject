@@ -62,11 +62,9 @@ public class PlayerHealthController : MonoBehaviour
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
                 UIController.instance.levelText.SetActive(false);
-                BossController.instance.gameObject.SetActive(false) ;
-
-
                 AudioManager.instance.PlayGameOver();
                 AudioManager.instance.PlaySFX(8);
+                BossController.instance.gameObject.SetActive(false);
             }
 
             // Update UI component when take damage

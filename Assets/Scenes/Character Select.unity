@@ -6807,6 +6807,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1978632768311640782, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: levelTextTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1978632768311640783, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6961,6 +6966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750327216115513747, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+        type: 3}
+      propertyPath: m_Text
+      value: The HUB
       objectReference: {fileID: 0}
     - target: {fileID: 4255493932126086026, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
