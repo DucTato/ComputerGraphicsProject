@@ -7,9 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public string levelToLoad;
 
-    public GameObject deletePanel;
+    //public GameObject deletePanel;
 
-    public CharacterSelector[] charactersToDelete;
+    //public CharacterSelector[] charactersToDelete;
 
     // Start is called before the first frame update
     void Start()
@@ -33,23 +33,22 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void DeleteSave()
-    {
-        deletePanel.SetActive(true);
-    }
+    // PLANNED FEATURE :D
+    //public void DeleteSave()
+    //{
+    //    deletePanel.SetActive(true);
+    //}
 
-    public void ConfirmDelete()
-    {
-        deletePanel.SetActive(false);
-
-        foreach(CharacterSelector theChar in charactersToDelete)
-        {
-            PlayerPrefs.SetInt(theChar.playerToSpawn.name, 0);
-        }
-    }
-
-    public void CancelDelete()
-    {
-        deletePanel.SetActive(false);
-    }
+    //public void ConfirmDelete()
+    //{
+    //    deletePanel.SetActive(false);
+    //    foreach(CharacterSelector theChar in charactersToDelete)
+    //    {
+    //        PlayerPrefs.SetInt(theChar.playerToSpawn.name, 0);
+    //    }
+    //}
+    //public void CancelDelete()
+    //{
+    //    deletePanel.SetActive(false);
+    //}
 }

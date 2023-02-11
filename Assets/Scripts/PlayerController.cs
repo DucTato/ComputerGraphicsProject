@@ -13,15 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform gunArm;
 
-    //private Camera theCam;
-
     public Animator anim;
-
-    /* public GameObject bulletToFire;
-    public Transform firePoint;
-
-    public float timeBetweenShots;
-    private float shotCounter; */
 
     public SpriteRenderer bodySR;
 
@@ -66,15 +58,14 @@ public class PlayerController : MonoBehaviour
 
             moveInput.Normalize();
 
-            //transform.position += new Vector3(moveInput.x * Time.deltaTime * moveSpeed, moveInput.y * Time.deltaTime * moveSpeed, 0f);
-
             theRB.velocity = moveInput * activeMoveSpeed;
-
+            // Check the current mouse position related to the screen
             Vector3 mousePos = Input.mousePosition;
             Vector3 screenPoint = CameraController.instance.mainCamera.WorldToScreenPoint(transform.localPosition);
-
+            // If x of mouse position is less that of the the screen, the Player is looking to the RIGHT
             if (mousePos.x < screenPoint.x)
             {
+                // Flip the Sprites to the RIGHT
                 transform.localScale = new Vector3(-1f, 1f, 1f);
                 gunArm.localScale = new Vector3(-1f, -1f, 1f);
             }
@@ -84,33 +75,15 @@ public class PlayerController : MonoBehaviour
                 gunArm.localScale = Vector3.one;
             }
 
-            //rotate gun arm
+            // Rotate gun arm
             Vector2 offset = new Vector2(mousePos.x - screenPoint.x, mousePos.y - screenPoint.y);
+            // Find the angle of 2 vectors
             float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
             gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
 
 
-            /* if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                shotCounter = timeBetweenShots;
-                AudioManager.instance.PlaySFX(12);
-
-            }
-
-            if (Input.GetMouseButton(0))
-            {
-                shotCounter -= Time.deltaTime;
-
-                if (shotCounter <= 0)
-                {
-                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                    AudioManager.instance.PlaySFX(12);
-
-                    shotCounter = timeBetweenShots;
-                }
-            } */
+            
 
             if(Input.GetKeyDown(KeyCode.Tab))
             {
@@ -130,14 +103,15 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-
+            // Dash Ability
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (dashCoolCounter <= 0 && dashCounter <= 0)
                 {
-                    activeMoveSpeed = dashSpeed;
+                    // Is the player can Dash?
+                    activeMoveSpeed = dashSpeed; // Increase the movement Speed while Dashing
                     dashCounter = dashLength;
-
+                    // Set the state machine
                     anim.SetTrigger("dash");
 
                     PlayerHealthController.instance.MakeInvincible(dashInvincibility);
@@ -145,7 +119,7 @@ public class PlayerController : MonoBehaviour
                     AudioManager.instance.PlaySFX(8);
                 }
             }
-
+            // Cooldown after Dash
             if (dashCounter > 0)
             {
                 dashCounter -= Time.deltaTime;
@@ -173,7 +147,8 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isMoving", false);
             }
-        } else
+        } 
+        else
         {
             theRB.velocity = Vector2.zero;
             anim.SetBool("isMoving", false);
@@ -192,7 +167,6 @@ public class PlayerController : MonoBehaviour
 
         UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
         UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
-
         AudioManager.instance.PlaySFX(6);
     }
 }

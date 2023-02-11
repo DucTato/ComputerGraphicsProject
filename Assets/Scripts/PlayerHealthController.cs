@@ -22,9 +22,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         maxHealth = CharacterTracker.instance.maxHealth;
         currentHealth = CharacterTracker.instance.currentHealth;
-
-        //currentHealth = maxHealth;
-
+        // push the values to UI components
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
@@ -39,6 +37,7 @@ public class PlayerHealthController : MonoBehaviour
 
             if(invincCount <= 0)
             {
+                // When player is not invincible, full alpha color :D
                 PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r, PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, 1f);
 
             }
@@ -49,17 +48,18 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (invincCount <= 0)
         {
+            // If player is not invincible, apply damage to health
             AudioManager.instance.PlaySFX(11);
             currentHealth--;
-
+            // Start the invincible cycle
             invincCount = damageInvincLength;
-
+            // While invincible, 50% alpha color
             PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r, PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, .5f);
 
             if (currentHealth <= 0)
             {
+                // HP <= De-activate the player, Activate Death Scene, etc...
                 PlayerController.instance.gameObject.SetActive(false);
-
                 UIController.instance.deathScreen.SetActive(true);
                 UIController.instance.levelText.SetActive(false);
                 BossController.instance.gameObject.SetActive(false) ;
@@ -69,7 +69,7 @@ public class PlayerHealthController : MonoBehaviour
                 AudioManager.instance.PlaySFX(8);
             }
 
-
+            // Update UI component when take damage
             UIController.instance.healthSlider.value = currentHealth;
             UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
         }
@@ -78,6 +78,7 @@ public class PlayerHealthController : MonoBehaviour
     public void MakeInvincible(float length)
     {
         invincCount = length;
+        // 50% alpha color during Dash Ability
         PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r, PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, .5f);
 
     }
@@ -89,16 +90,16 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-
+        // Update UI component when heal 
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
     }
-
+    // Shop BUFF item
     public void IncreaseMaxHealth(int amount)
     {
         maxHealth += amount;
         currentHealth = maxHealth;
-
+        // Update UI component
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();

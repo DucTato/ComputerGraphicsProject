@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Each gun has unique features such as Fire rate, Bullet sprites, Bullet damage
         if (PlayerController.instance.canMove && !LevelManager.instance.isPaused)
         {
             if (shotCounter > 0)
@@ -41,19 +42,6 @@ public class Gun : MonoBehaviour
                     AudioManager.instance.PlaySFX(12);
 
                 }
-
-                /* if (Input.GetMouseButton(0))
-                {
-                    shotCounter -= Time.deltaTime;
-
-                    if (shotCounter <= 0)
-                    {
-                        Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                        AudioManager.instance.PlaySFX(12);
-
-                        shotCounter = timeBetweenShots;
-                    }
-                } */
             }
         }
     }

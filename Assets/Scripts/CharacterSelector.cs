@@ -45,17 +45,18 @@ public class CharacterSelector : MonoBehaviour
                 Vector3 playerPos = PlayerController.instance.transform.position;
 
                 Destroy(PlayerController.instance.gameObject);
-
+                // Destroy the current Player Object
                 PlayerController newPlayer = Instantiate(playerToSpawn, playerPos, playerToSpawn.transform.rotation);
                 PlayerController.instance = newPlayer;
 
                 gameObject.SetActive(false);
-
+                // Camera focuses on the new Player Object
                 CameraController.instance.target = newPlayer.transform;
-
                 CharacterSelectManager.instance.activePlayer = newPlayer;
+                // Set the previous chosen character to be able to be selected again
                 CharacterSelectManager.instance.activeCharSelect.gameObject.SetActive(true);
                 CharacterSelectManager.instance.activeCharSelect = this;
+                
             }
         }
     }

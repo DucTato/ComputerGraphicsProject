@@ -30,14 +30,13 @@ public class GunChest : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
+                // Upon pressing E, select a random gun from an array
                 int gunSelect = Random.Range(0, potentialGuns.Length);
-
                 Instantiate(potentialGuns[gunSelect], spawnPoint.position, spawnPoint.rotation);
-
+                // change the sprite to the opened chest
                 theSR.sprite = chestOpen;
-
+                // Update the state of the chest
                 isOpen = true;
-
                 transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
             }
         }
@@ -48,6 +47,7 @@ public class GunChest : MonoBehaviour
         }
     }
 
+    // Toggle the message in vicinity of the player
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")

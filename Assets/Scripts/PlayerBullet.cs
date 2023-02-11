@@ -20,14 +20,16 @@ public class PlayerBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Bullets only travel in 1 direction
         theRB.velocity = transform.right * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Spawn FX
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
-
+        // Gun sound
         AudioManager.instance.PlaySFX(4);
 
         if (other.tag == "Enemy")
@@ -38,7 +40,6 @@ public class PlayerBullet : MonoBehaviour
         if(other.tag == "Boss")
         {
             BossController.instance.TakeDamage(damageToGive);
-
             Instantiate(BossController.instance.hitEffect, transform.position, transform.rotation);
         }
     }

@@ -25,7 +25,7 @@ public class Breakables : MonoBehaviour
         
     }
 
-    public void Smash()
+    public void Smash() // Breaking box
     {
         Destroy(gameObject);
 
@@ -33,6 +33,7 @@ public class Breakables : MonoBehaviour
 
         //show broken pieces
         int piecesToDrop = Random.Range(1, maxPieces);
+        // Randomize the number of pieces
 
         for (int i = 0; i < piecesToDrop; i++)
         {
@@ -44,7 +45,7 @@ public class Breakables : MonoBehaviour
         //drop items
         if (shouldDropItem)
         {
-            float dropChance = Random.Range(0f, 100f);
+            float dropChance = Random.Range(0f, 100f); // Change the percentage of item drops
 
             if (dropChance < itemDropPercent)
             {
@@ -57,6 +58,7 @@ public class Breakables : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Player can dash to break box
         if (other.tag == "Player")
         {
             if (PlayerController.instance.dashCounter > 0)
@@ -64,7 +66,7 @@ public class Breakables : MonoBehaviour
                 Smash();
             }
         }
-
+        // Player can shoot to break box
         if(other.tag == "PlayerBullet")
         {
             Smash();

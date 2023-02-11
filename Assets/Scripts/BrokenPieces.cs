@@ -27,9 +27,10 @@ public class BrokenPieces : MonoBehaviour
         transform.position += moveDirection * Time.deltaTime;
 
         moveDirection = Vector3.Lerp(moveDirection, Vector3.zero, deceleration * Time.deltaTime);
+        // linear interpolate :> between vector moveDirection and Vector (0,0,0)
 
         lifetime -= Time.deltaTime;
-
+        // the pieces exist in x duration and slowly fading during that duration
         if(lifetime < 0)
         {
             theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, Mathf.MoveTowards(theSR.color.a, 0f, fadeSpeed * Time.deltaTime));
@@ -37,6 +38,7 @@ public class BrokenPieces : MonoBehaviour
             if (theSR.color.a == 0f)
             {
                 Destroy(gameObject);
+                // when opacity reaches 0, destroy object
             }
         }
     }

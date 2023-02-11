@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Black to white
         if(fadeOutBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
@@ -58,7 +59,7 @@ public class UIController : MonoBehaviour
 
             }
         }
-
+        // White to black
         if(fadeToBlack)
         {
             fadeScreen.gameObject.SetActive(true);
@@ -70,14 +71,7 @@ public class UIController : MonoBehaviour
                 fadeToBlack = false;
                 
             }
-        }
-
-        //levelTextTime-= Time.deltaTime;
-        //if (levelTextTime < 0)
-        //{
-        //    UIController.instance.levelText.SetActive(false);
-        //}
-       
+        }       
     }
 
     public void StartFadeToBlack()
@@ -88,6 +82,7 @@ public class UIController : MonoBehaviour
 
     public void NewGame()
     {
+        //Death Scene Button
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(newGameScene);
@@ -97,6 +92,7 @@ public class UIController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        // Pause Screen Button
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(mainMenuScene);

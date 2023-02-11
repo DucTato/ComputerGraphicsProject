@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public bool closeWhenEntered /* , openWhenEnemiesCleared */;
+    public bool closeWhenEntered ;
 
     public GameObject[] doors;
 
     //public List<GameObject> enemies = new List<GameObject>();
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool roomActive;
 
     public GameObject mapHider;
@@ -53,7 +53,6 @@ public class Room : MonoBehaviour
         foreach (GameObject door in doors)
         {
             door.SetActive(false);
-
             closeWhenEntered = false;
         }
     }
@@ -62,6 +61,8 @@ public class Room : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            // When the player enters the Trigger box, change the Camera to the new room
+            // Close the doors, trapping the player inside
             CameraController.instance.ChangeTarget(transform);
 
             if(closeWhenEntered)
@@ -73,7 +74,6 @@ public class Room : MonoBehaviour
             }
 
             roomActive = true;
-
             mapHider.SetActive(false);
         }
     }

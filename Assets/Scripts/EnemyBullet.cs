@@ -10,6 +10,7 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Direct the bullets towards the player
         direction = PlayerController.instance.transform.position - transform.position;
         direction.Normalize();
     }

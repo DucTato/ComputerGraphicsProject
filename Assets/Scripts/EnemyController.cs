@@ -59,6 +59,7 @@ public class EnemyController : MonoBehaviour
     {
         if(shouldWander)
         {
+            // Randomly pauses during wandering
             pauseCounter = Random.Range(pauseLength * .75f, pauseLength * 1.25f);
         }
     }
@@ -66,12 +67,15 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
+        // Check if the enemies are visible by any camera, and the player is in the Scene
+        // Prevent the enemies from going out of the room 
+        if (theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
         {
             moveDirection = Vector3.zero;
 
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer && shouldChasePlayer)
             {
+                // Facing the enemies towards the player
                 if (PlayerController.instance.transform.position.x < transform.position.x)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -80,8 +84,10 @@ public class EnemyController : MonoBehaviour
                 {
                     transform.localScale = Vector3.one;
                 }
+                // Chase the player
                 moveDirection = PlayerController.instance.transform.position - transform.position;
-            } else
+            } 
+            else
             {
                 if(shouldWander)
                 {
@@ -117,6 +123,7 @@ public class EnemyController : MonoBehaviour
 
                     if(Vector3.Distance(transform.position, patrolPoints[currentPatrolPoint].position) < .2f)
                     {
+                        // The enemies cycle through the patrol points (which are set in the room)
                         currentPatrolPoint++;
                         if(currentPatrolPoint >= patrolPoints.Length)
                         {
@@ -128,15 +135,9 @@ public class EnemyController : MonoBehaviour
 
             if(shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < runawayRange)
             {
+                // move in the opposite direction of the player
                 moveDirection = transform.position - PlayerController.instance.transform.position;
             }
-
-            
-            /*else
-            {
-                moveDirection = Vector3.zero;
-            } */
-
 
             moveDirection.Normalize();
 
@@ -145,6 +146,7 @@ public class EnemyController : MonoBehaviour
 
             if (shouldShoot && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < shootRange)
             {
+                // Fire rate
                 fireCounter -= Time.deltaTime;
 
                 if (fireCounter <= 0)
@@ -156,11 +158,12 @@ public class EnemyController : MonoBehaviour
             }
 
 
-        } else
-        {
-            theRB.velocity = Vector2.zero;
         }
-
+        else
+        {
+            theRB.velocity = Vector2.zero; // enemies always stay in the room
+        }
+        // Animator State machine :>
         if (moveDirection != Vector3.zero)
         {
             anim.SetBool("isMoving", true);
@@ -184,10 +187,11 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
 
             AudioManager.instance.PlaySFX(1);
+            // When an enemy is killed, spawn a randomized blood puddle
 
             int selectedSplatter = Random.Range(0, deathSplatters.Length);
 
-            int rotation = Random.Range(0, 4);
+            int rotation = Random.Range(0, 4); // random blood puddle 
 
             Instantiate(deathSplatters[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotation * 90f));
 
@@ -203,8 +207,6 @@ public class EnemyController : MonoBehaviour
                     Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
                 }
             }
-
-            //Instantiate(deathSplatter, transform.position, transform.rotation);
         }
     }
 }

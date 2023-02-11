@@ -8,7 +8,7 @@ public class CharacterSelectManager : MonoBehaviour
 
     public PlayerController activePlayer;
     public CharacterSelector activeCharSelect;
-
+    // Middle variable used to transfer values
 
     private void Awake()
     {

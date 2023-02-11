@@ -17,6 +17,7 @@ public class CoinPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Wait for x duration to be collected
         if (waitToBeCollected > 0)
         {
             waitToBeCollected -= Time.deltaTime;

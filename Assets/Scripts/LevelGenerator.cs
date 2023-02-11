@@ -37,11 +37,12 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Change the color of the starting room
         Instantiate(layoutRoom, generatorPoint.position, generatorPoint.rotation).GetComponent<SpriteRenderer>().color = startColor;
-
+        // Select at random a direction to continue generating more rooms :D
         selectedDirection = (Direction)Random.Range(0, 4);
         MoveGenerationPoint();
-
+        // Loop to generate rooms, up to distanceToEnd (Ending point)
         for(int i = 0; i < distanceToEnd; i++)
         {
             GameObject newRoom = Instantiate(layoutRoom, generatorPoint.position, generatorPoint.rotation);
@@ -50,6 +51,7 @@ public class LevelGenerator : MonoBehaviour
 
             if(i + 1 == distanceToEnd)
             {
+                // Change the color of the Ending room, remove it from the layout object list
                 newRoom.GetComponent<SpriteRenderer>().color = endColor;
                 layoutRoomObjects.RemoveAt(layoutRoomObjects.Count - 1);
 
@@ -58,7 +60,7 @@ public class LevelGenerator : MonoBehaviour
 
             selectedDirection = (Direction)Random.Range(0, 4);
             MoveGenerationPoint();
-
+            // Prevent overlapping rooms
             while (Physics2D.OverlapCircle(generatorPoint.position, .2f, whatIsRoom))
             {
                 MoveGenerationPoint();

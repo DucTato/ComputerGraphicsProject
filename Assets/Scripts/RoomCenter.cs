@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RoomCenter : MonoBehaviour
 {
-    public bool openWhenEnemiesCleared;
+    [HideInInspector]
+    public bool openWhenEnemiesCleared = true;
 
     public List<GameObject> enemies = new List<GameObject>();
 
@@ -13,6 +14,7 @@ public class RoomCenter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Always true :D
         if(openWhenEnemiesCleared)
         {
             theRoom.closeWhenEntered = true;

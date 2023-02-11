@@ -30,6 +30,7 @@ public class BossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Define the action sequences of the boss
         actions = sequences[currentSequence].actions;
 
         actionCounter = actions[currentAction].actionLength;
@@ -44,18 +45,19 @@ public class BossController : MonoBehaviour
         if(actionCounter > 0)
         {
             actionCounter -= Time.deltaTime;
+            // Intervals between boss' actions
 
             //handle movement
             moveDirection = Vector2.zero;
-
+            // Boss stands still to do actions
             if(actions[currentAction].shouldMove)
             {
                 if(actions[currentAction].shouldChasePlayer)
                 {
-                    moveDirection = PlayerController.instance.transform.position - transform.position;
+                    moveDirection = PlayerController.instance.transform.position - transform.position; // Chase the playah
                     moveDirection.Normalize();
                 }
-
+           
                 if(actions[currentAction].moveToPoint && Vector3.Distance(transform.position, actions[currentAction].pointToMoveTo.position) > .5f)
                 {
                     moveDirection = actions[currentAction].pointToMoveTo.position - transform.position;
@@ -67,11 +69,13 @@ public class BossController : MonoBehaviour
 
 
             theRB.velocity = moveDirection * actions[currentAction].moveSpeed;
+            // moving the boss
 
 
             //handle shooting
             if(actions[currentAction].shouldShoot)
             {
+                // fire rate
                 shotCounter -= Time.deltaTime;
                 if(shotCounter <= 0)
                 {
@@ -86,16 +90,19 @@ public class BossController : MonoBehaviour
 
         } else
         {
+            // Do the action in x duration
             currentAction++;
             if(currentAction >= actions.Length)
             {
                 currentAction = 0;
+                // reset the duration
             }
 
             actionCounter = actions[currentAction].actionLength;
         }
     }
 
+    // Damaging the BOSS
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
@@ -103,6 +110,7 @@ public class BossController : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            // Spawning a blood puddle
 
             Instantiate(deathEffect, transform.position, transform.rotation);
 
@@ -117,7 +125,8 @@ public class BossController : MonoBehaviour
         }
         else
         {
-            if(currentHealth <= sequences[currentSequence].endSequenceHealth && currentSequence < sequences.Length - 1)
+            // 2nd sequence, boss moving accross the points
+            if (currentHealth <= sequences[currentSequence].endSequenceHealth && currentSequence < sequences.Length - 1)
             {
                 currentSequence++;
                 actions = sequences[currentSequence].actions;

@@ -9,8 +9,8 @@ public class SpriteSortOrder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        theSR = GetComponent<SpriteRenderer>();
-
+        theSR = GetComponent<SpriteRenderer>(); 
+        // The higher the object, the further it is (overlapped by other objects)
         theSR.sortingOrder = Mathf.RoundToInt( transform.position.y * -10f);
     }
 

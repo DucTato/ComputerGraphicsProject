@@ -46,14 +46,13 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator LevelEnd()
     {
+
         AudioManager.instance.PlayLevelWin();
-
         PlayerController.instance.canMove = false;
-
         UIController.instance.StartFadeToBlack();
 
         yield return new WaitForSeconds(waitToLoad);
-
+        // Keep track of the coin
         CharacterTracker.instance.currentCoins = currentCoins;
         CharacterTracker.instance.currentHealth = PlayerHealthController.instance.currentHealth;
         CharacterTracker.instance.maxHealth = PlayerHealthController.instance.maxHealth;
@@ -82,15 +81,15 @@ public class LevelManager : MonoBehaviour
 
     public void GetCoins(int amount)
     {
+        // Update UI when receive coin
         currentCoins += amount;
-
         UIController.instance.coinText.text = currentCoins.ToString();
     }
 
     public void SpendCoins(int amount)
     {
         currentCoins -= amount;
-
+        // Update UI when lose coin
         if(currentCoins < 0)
         {
             currentCoins = 0;
