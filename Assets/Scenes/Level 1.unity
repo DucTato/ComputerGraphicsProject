@@ -614,12 +614,12 @@ PrefabInstance:
     - target: {fileID: 4554966111833551723, guid: 7beaa2c9040d76941b076d06e9c95790,
         type: 3}
       propertyPath: maxDistanceToGunRoom
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4554966111833551723, guid: 7beaa2c9040d76941b076d06e9c95790,
         type: 3}
       propertyPath: minDistanceToGunRoom
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7beaa2c9040d76941b076d06e9c95790, type: 3}

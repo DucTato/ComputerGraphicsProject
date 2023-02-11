@@ -555,12 +555,12 @@ PrefabInstance:
     - target: {fileID: 4554966111833551723, guid: 7beaa2c9040d76941b076d06e9c95790,
         type: 3}
       propertyPath: maxDistanceToGunRoom
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4554966111833551723, guid: 7beaa2c9040d76941b076d06e9c95790,
         type: 3}
       propertyPath: minDistanceToGunRoom
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7beaa2c9040d76941b076d06e9c95790, type: 3}
@@ -8321,6 +8321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character Cage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530482223803253122, guid: 0c23a53c03e1fa541883c1332b1da203,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8530482223803253123, guid: 0c23a53c03e1fa541883c1332b1da203,
         type: 3}

@@ -27,17 +27,17 @@ public class GunPickup : MonoBehaviour
     {
         if (other.tag == "Player" && waitToBeCollected <= 0)
         {
-            bool hasGun = true;
+            // bool hasGun = true;
             //foreach(Gun gunToCheck in PlayerController.instance.availableGuns)
             //{
                 //if(theGun.weaponName == gunToCheck.weaponName)
                 //{
-                    hasGun = true;
+                //   hasGun = true;
                 //}
             //}
 
-            if(!hasGun)
-            {
+            //if(!hasGun)
+            
                 Gun gunClone = Instantiate(theGun);
                 gunClone.transform.parent = PlayerController.instance.gunArm;
                 gunClone.transform.position = PlayerController.instance.gunArm.position;
@@ -47,7 +47,7 @@ public class GunPickup : MonoBehaviour
                 PlayerController.instance.availableGuns.Add(gunClone);
                 PlayerController.instance.currentGun = PlayerController.instance.availableGuns.Count - 1;
                 PlayerController.instance.SwitchGun();
-            }
+            
 
             Destroy(gameObject);
 
