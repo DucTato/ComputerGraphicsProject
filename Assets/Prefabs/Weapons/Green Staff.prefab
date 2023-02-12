@@ -102,7 +102,7 @@ MonoBehaviour:
   bulletToFire: {fileID: 2694096419384989725, guid: 831a915c10c0e70448391fd3737074f4,
     type: 3}
   firePoint: {fileID: 8833703477076363106}
-  timeBetweenShots: 0.2
+  timeBetweenShots: 0.5
   weaponName: Green Staff
   gunUI: {fileID: 21300000, guid: 1d232a9103f5a03459889eb6a2f066d0, type: 3}
   itemCost: 35

@@ -102,7 +102,7 @@ MonoBehaviour:
   bulletToFire: {fileID: 9070735391092049552, guid: ae2ea5a1c77ff524cabc81c7848498f5,
     type: 3}
   firePoint: {fileID: 7732091095530399040}
-  timeBetweenShots: 1
+  timeBetweenShots: 0.325
   weaponName: Knight Saber
   gunUI: {fileID: 21300000, guid: 14e47836d5e9006438b31439c35eb060, type: 3}
   itemCost: 45

@@ -101,7 +101,7 @@ MonoBehaviour:
   bulletToFire: {fileID: 4189913780510908286, guid: aea44e738a6d53d428ed536f7372350f,
     type: 3}
   firePoint: {fileID: 4150162488350442314}
-  timeBetweenShots: 0.75
+  timeBetweenShots: 1.1
   weaponName: Bow
   gunUI: {fileID: 21300000, guid: f30d8d030dd1c4042922acac2cc83c01, type: 3}
   itemCost: 25
