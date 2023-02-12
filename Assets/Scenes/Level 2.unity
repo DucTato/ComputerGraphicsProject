@@ -553,7 +553,7 @@ PrefabInstance:
         type: 3}
       propertyPath: levelText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1978632769513821944}
     - target: {fileID: 1978632768311640782, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
         type: 3}
       propertyPath: levelTextTime
@@ -681,6 +681,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b9ce2ca24dcf75499a92463d001fb1c, type: 3}
+--- !u!1 &1978632769513821944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842381883243943007, guid: 8b9ce2ca24dcf75499a92463d001fb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1978632769513821943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9107463910748267216
 PrefabInstance:
   m_ObjectHideFlags: 0

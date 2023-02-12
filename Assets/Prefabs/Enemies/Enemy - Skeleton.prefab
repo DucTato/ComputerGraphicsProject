@@ -120,7 +120,9 @@ MonoBehaviour:
   shouldShoot: 1
   bullet: {fileID: 5819456331581889278, guid: c73098aed36748949aca357bc42013a6, type: 3}
   firePoint: {fileID: 2792074072588716801}
-  fireRate: 1
+  fireRate: 120
+  timeBetweenBurst: 4
+  BurstSize: 3
   shootRange: 10
   theBody: {fileID: 3837762968396883525}
   anim: {fileID: 3837762968103363247}

@@ -38,6 +38,8 @@ public class EnemyController : MonoBehaviour
     public Transform firePoint;
     public float fireRate;
     private float fireCounter;
+    public float timeBetweenBurst;
+    public int BurstSize;
 
     public float shootRange;
 
@@ -132,11 +134,33 @@ public class EnemyController : MonoBehaviour
                     }
                 }
             }
-
+            // If the player is in the Run Away range, RUUUUN!
             if(shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < runawayRange)
             {
                 // move in the opposite direction of the player
                 moveDirection = transform.position - PlayerController.instance.transform.position;
+                // Facing the enemies away from the player (while running away from them :D)
+                if (PlayerController.instance.transform.position.x <= transform.position.x)
+                {
+                    transform.localScale = Vector3.one;
+                }
+                else
+                {
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }
+            }
+            else // If the player gets out of Run Away range, chase them! :D
+            {
+                
+                if (PlayerController.instance.transform.position.x < transform.position.x)
+                {
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }
+                else
+                {
+                    transform.localScale = Vector3.one;
+                }
+                moveDirection = PlayerController.instance.transform.position - transform.position;
             }
 
             moveDirection.Normalize();
@@ -146,14 +170,13 @@ public class EnemyController : MonoBehaviour
 
             if (shouldShoot && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < shootRange)
             {
-                // Fire rate
+                // Set the firing frequency
                 fireCounter -= Time.deltaTime;
 
                 if (fireCounter <= 0)
                 {
-                    fireCounter = fireRate;
-                    Instantiate(bullet, firePoint.position, firePoint.rotation);
-                    AudioManager.instance.PlaySFX(13);
+                    fireCounter = timeBetweenBurst;
+                    StartCoroutine(BrstFire(BurstSize));
                 }
             }
 
@@ -207,6 +230,16 @@ public class EnemyController : MonoBehaviour
                     Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
                 }
             }
+        }
+    }
+    private IEnumerator BrstFire(int BurstSize)
+    {
+        // Burst Fire Feature (BFF!) Enemies fire in Bursts, to add variety
+        for (int i = 0; i < BurstSize; i++)
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            AudioManager.instance.PlaySFX(13);
+            yield return new WaitForSeconds(60 / fireRate);
         }
     }
 }
