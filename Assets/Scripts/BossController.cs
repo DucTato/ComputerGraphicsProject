@@ -6,6 +6,7 @@ public class BossController : MonoBehaviour
 {
     public static BossController instance;
 
+    public Animator anim;
     public BossAction[] actions;
     private int currentAction;
     private float actionCounter;
@@ -75,6 +76,7 @@ public class BossController : MonoBehaviour
             //handle shooting
             if(actions[currentAction].shouldShoot)
             {
+                anim.SetBool("isShooting", true);
                 // fire rate
                 shotCounter -= Time.deltaTime;
                 if(shotCounter <= 0)
@@ -86,10 +88,12 @@ public class BossController : MonoBehaviour
                         Instantiate(actions[currentAction].itemToShoot, t.position, t.rotation);
                     }
                 }
+                
             }
 
         } else
         {
+            anim.SetBool("isShooting", false);
             // Do the action in x duration
             currentAction++;
             if(currentAction >= actions.Length)

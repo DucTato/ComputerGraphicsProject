@@ -383,7 +383,7 @@ PrefabInstance:
         type: 3}
       propertyPath: centerEnd
       value: 
-      objectReference: {fileID: 7794959228091938176, guid: 36d1593484867084c8f043bd1a9bc798,
+      objectReference: {fileID: 7306091908294974161, guid: 70e786f32e563184cb61e45cf18d4653,
         type: 3}
     - target: {fileID: 4554966111833551723, guid: 7beaa2c9040d76941b076d06e9c95790,
         type: 3}
@@ -697,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 9107463910290582433, guid: 88a2230be5c593e459da007bdcb7f56b,
         type: 3}
       propertyPath: nextLevel
-      value: Level 3
+      value: Boss 1
       objectReference: {fileID: 0}
     - target: {fileID: 9107463910290582461, guid: 88a2230be5c593e459da007bdcb7f56b,
         type: 3}

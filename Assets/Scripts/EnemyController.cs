@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     public Rigidbody2D theRB;
     public float moveSpeed;
+    private float normalSpeed;
 
 
     [Header("Chase Player")]
@@ -17,6 +18,7 @@ public class EnemyController : MonoBehaviour
     [Header("Run Away")]
     public bool shouldRunAway;
     public float runawayRange;
+
 
     [Header("Wandering")]
     public bool shouldWander;
@@ -59,6 +61,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        normalSpeed = moveSpeed;
         if(shouldWander)
         {
             // Randomly pauses during wandering
@@ -135,8 +138,9 @@ public class EnemyController : MonoBehaviour
                 }
             }
             // If the player is in the Run Away range, RUUUUN!
-            if(shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < runawayRange)
+            if(shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) <= runawayRange)
             {
+                moveSpeed = 5;
                 // move in the opposite direction of the player
                 moveDirection = transform.position - PlayerController.instance.transform.position;
                 // Facing the enemies away from the player (while running away from them :D)
@@ -149,9 +153,10 @@ public class EnemyController : MonoBehaviour
                     transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
             }
-            else // If the player gets out of Run Away range, chase them! :D
+            // If the player gets out of Run Away range, chase them! :D
+            if (shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) > (runawayRange + 0.2f))
             {
-                
+                moveSpeed = normalSpeed;   
                 if (PlayerController.instance.transform.position.x < transform.position.x)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -196,7 +201,6 @@ public class EnemyController : MonoBehaviour
             anim.SetBool("isMoving", false);
         }
     }
-
     public void DamageEnemy(int damage)
     {
         health -= damage;

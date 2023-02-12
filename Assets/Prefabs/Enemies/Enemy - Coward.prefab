@@ -164,7 +164,7 @@ MonoBehaviour:
   shouldChasePlayer: 0
   rangeToChasePlayer: 7
   shouldRunAway: 1
-  runawayRange: 5
+  runawayRange: 3.5
   shouldWander: 0
   wanderLength: 0
   pauseLength: 0

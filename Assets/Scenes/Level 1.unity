@@ -1074,7 +1074,7 @@ PrefabInstance:
     - target: {fileID: 9107463910290582433, guid: 88a2230be5c593e459da007bdcb7f56b,
         type: 3}
       propertyPath: nextLevel
-      value: Boss 1
+      value: Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 9107463910290582461, guid: 88a2230be5c593e459da007bdcb7f56b,
         type: 3}
